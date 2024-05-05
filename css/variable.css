@@ -1,7 +1,8 @@
 :root{
      /* SIZE */
      --Large--Screen--Width: 1000px;
-     --Nav--Big--Screen--Size: 175px;
+     --Nav--Big--Screen--Size: 165px;
+     --Content--Min--Max: 250px;
  
      --Layout--Tiny--Size: 0.5rem;
      --Layout--Small--Size: 1rem;
