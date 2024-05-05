@@ -1,11 +1,7 @@
 :root{
      /* SIZE */
      --Large--Screen--Width: 1000px;
-     --Nav--Big--Screen--Size: 125px;
-     --Content--Min--Max--Size: 200px;
-     --Account--Content--Max--Size: 500px;
-     --Search--Item--Max--Size: 250px;
-     --Profile--Info--Min--Size: 250px;
+     --Nav--Big--Screen--Size: 175px;
  
      --Layout--Tiny--Size: 0.5rem;
      --Layout--Small--Size: 1rem;
@@ -30,4 +26,5 @@
      --Button--Normal--Color: #cecece;
      --Button--Hover--Color: #ffffff;
      --Button--Active--Color: #000000;
+     --Button--Text--Color: #000000;
 }
