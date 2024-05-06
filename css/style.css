@@ -8,7 +8,7 @@ html{
 
 header{
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr 68px;
     z-index: 10;
 }
 
@@ -62,6 +62,7 @@ a{
 
 h1{
     padding-left: var(--Layout--Medium--Size);
+    font-size: var(--Font--Medium);
 }
 
 h1, h2, nav li{
@@ -74,15 +75,55 @@ header{
     border-bottom: 1px solid white;
 }
 
+.projs-span{
+    margin-bottom: var(--Layout--Large--Size);
+}
+
 .proj-div{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     box-sizing: border-box;
     margin-bottom: var(--Layout--Large--Size);
 }
 
+.proj-list-item{
+    padding: var(--Layout--Small--Size);
+    padding-bottom: 0;
+}
+
+.wide-proj-thumnail, .small-proj-thumnail{
+    width: 125px;
+    height: 120px;
+    padding-right: var(--Layout--Small--Size);
+    float: left;
+    display: none;
+}
+
+.small-proj-thumnail{
+    display: initial;
+}
+
+.proj-list-item h3{
+    margin: 0;
+    padding-bottom: var(--Layout--Small--Size);
+    font-size: var(--Font--Tiny);
+}
+
+.proj-div h3{
+    margin: 0;
+    padding: var(--Layout--Tiny--Size);
+}
+
+.proj-div:hover, .proj-list-item:hover{
+    border: 1px solid white;
+}
+
 .proj-thumnail{
     width: 100%;
+    box-sizing: border-box;
     object-fit: fill;
+    padding-left: var(--Layout--Tiny--Size);
+    padding-right: var(--Layout--Tiny--Size);
+    padding-bottom: var(--Layout--Tiny--Size);
 }
 
 button{
@@ -104,7 +145,15 @@ button:active, ul a:active{
     color: var(--Button--Normal--Color);
 }
 
+#nav-menu-button{
+    padding: 0;
+}
+
 @media screen and (min-width: 550px) { 
+    h1{
+        font-size: var(--Font--High--Medium);
+    }
+
     .nav-list{
         display: grid;
     }
@@ -123,6 +172,35 @@ button:active, ul a:active{
         grid-template-columns: repeat(4, 1fr);
         gap: var(--Layout--Small--Size);
         grid-template-columns: repeat(auto-fill, minmax(var(--Content--Min--Max), 1fr));
+    }
+
+    .proj-div{
+        margin-bottom: 0;
+    }
+
+    .wide-proj-thumnail{
+        width: 300px;
+        height: 140px;
+        display: initial;
+    }
+
+    .small-proj-thumnail{
+        display: none;
+    }
+
+    .proj-list-item h3{
+        font-size: var(--Font--Small);
+    }
+
+    .proj-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .nav-list{
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 

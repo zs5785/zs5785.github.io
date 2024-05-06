@@ -11,8 +11,10 @@
      --Layout--Larger--Size: 4rem;
  
      /* FONT SIZE */
+     --Font--Tiny: 0.75rem;
      --Font--Small: 1rem;
      --Font--Medium: 1.5rem;
+     --Font--High--Medium: 2rem;
      --Font--Large: 3rem;
  
      /* COLOR */
