@@ -9,7 +9,6 @@ html{
 header{
     display: grid;
     grid-template-columns: 1fr 68px;
-    z-index: 10;
 }
 
 nav{
@@ -60,19 +59,26 @@ a{
     color: var(--Color--Font-Color);
 }
 
-h1{
+header h1{
     padding-left: var(--Layout--Medium--Size);
     font-size: var(--Font--Medium);
 }
 
-h1, h2, nav li{
+h1, h2, h3, nav li, .proj-download{
     text-transform: uppercase;
+}
+
+.proj-download{
+    display: block;
+    text-align: center;
+    font-size: var(--Font--Large);
 }
 
 header{
     margin-bottom: var(--Layout--Large--Size);
     background-color: var(--Color--Background);
     border-bottom: 1px solid white;
+    z-index: 1;
 }
 
 .projs-span{
@@ -90,10 +96,14 @@ header{
     padding-bottom: 0;
 }
 
+.proj-thumnail, .wide-proj-thumnail, .small-proj-thumnail{
+    border: 1px solid white;
+}
+
 .wide-proj-thumnail, .small-proj-thumnail{
     width: 125px;
     height: 120px;
-    padding-right: var(--Layout--Small--Size);
+    margin-right: var(--Layout--Small--Size);
     float: left;
     display: none;
 }
@@ -108,9 +118,15 @@ header{
     font-size: var(--Font--Tiny);
 }
 
+.proj-div{
+    padding-left:  var(--Layout--Tiny--Size);
+    padding-right:  var(--Layout--Tiny--Size);
+}
+
 .proj-div h3{
     margin: 0;
     padding: var(--Layout--Tiny--Size);
+    padding-left: 0;
 }
 
 .proj-div:hover, .proj-list-item:hover{
@@ -121,9 +137,96 @@ header{
     width: 100%;
     box-sizing: border-box;
     object-fit: fill;
-    padding-left: var(--Layout--Tiny--Size);
-    padding-right: var(--Layout--Tiny--Size);
-    padding-bottom: var(--Layout--Tiny--Size);
+}
+
+.yt-video{
+    width: 100%;
+}
+
+.gallery{
+    width: 100%;
+    position: relative;
+}
+
+.gallery-img{
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+.gallery-arrows{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+
+    border: 1px solid white;
+
+    padding: var(--Layout--Tiny--Size);
+
+    font-size: var(--Font--Small);
+    user-select: none;
+
+    transform:translateX(-25px);
+}
+
+#g-arrow-next{
+    right: 0;
+    transform:translateX(25px);
+}
+
+.gallery-dots{
+    text-align: center;
+}
+
+.gallery-dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-right: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+
+    box-sizing: border-box;
+}
+
+.gallery-dot-active, .gallery-dot:hover{
+    background-color: white;
+}
+
+.proj-overview ul{
+    list-style:square;
+    padding-right: var(--Layout--Small--Size);
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal-content{
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+#modal-close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: var(--Font--High--Medium);
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 button{
@@ -134,13 +237,13 @@ button{
     color: var(--Button--Normal--Color);
 }
 
-button:hover, ul a:hover{
+button:hover, ul a:hover, .gallery-arrows, #modal-close:hover{
     cursor: pointer;
     background-color: var(--Button--Hover--Color);
     color: var(--Button--Text--Color);
 }
 
-button:active, ul a:active{
+button:active, ul a:active, .gallery-arrows:hover{
     background-color: var(--Button--Active--Color);
     color: var(--Button--Normal--Color);
 }
@@ -150,7 +253,7 @@ button:active, ul a:active{
 }
 
 @media screen and (min-width: 550px) { 
-    h1{
+    header h1{
         font-size: var(--Font--High--Medium);
     }
 
@@ -182,6 +285,7 @@ button:active, ul a:active{
         width: 300px;
         height: 140px;
         display: initial;
+        object-fit: cover;
     }
 
     .small-proj-thumnail{
@@ -195,6 +299,28 @@ button:active, ul a:active{
     .proj-list{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    }
+
+    .proj-overview{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .proj-overview h2{
+        text-align: center;
+    }
+
+    .proj-overview section{
+        box-sizing: border-box;
+        border: 1px solid white;
+    }
+
+    .yt-video{
+        height: 450px;
+    }
+
+    #modal-content {
+        width: 80%;
     }
 }
 
@@ -231,5 +357,11 @@ button:active, ul a:active{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: var(--Layout--Small--Size);
+    }
+
+    .yt-video{
+        padding-left: 10%;
+        width: 80%;
+        height: 500px;
     }
 }
