@@ -81,6 +81,11 @@ header{
     z-index: 1;
 }
 
+main h1{
+    text-align: center;
+    font-size: var(--Font--Large);
+}
+
 .projs-span{
     margin-bottom: var(--Layout--Large--Size);
 }
@@ -89,6 +94,10 @@ header{
     /* border: 1px solid white; */
     box-sizing: border-box;
     margin-bottom: var(--Layout--Large--Size);
+}
+
+.proj-list h3{
+    text-wrap: nowrap;
 }
 
 .proj-list-item{
@@ -176,12 +185,13 @@ header{
 
 .gallery-dots{
     text-align: center;
+    font-size: 0;
 }
 
 .gallery-dot{
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 16px;
+    width: 16px;
     margin-right: 2px;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
@@ -195,8 +205,52 @@ header{
     background-color: white;
 }
 
-.proj-overview ul{
-    list-style:square;
+.proj-overview section{
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+.proj-features{
+    margin-top: var(--Layout--Medium--Size);
+}
+
+.proj-overview h2{
+    text-align: center;
+}
+
+.role-list{
+    list-style: square;
+    margin: 0;
+    padding: 0;
+    padding-left: var(--Layout--Small--Size);
+}
+
+.features-list{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.features-list li{
+    border-top: 1px solid white;
+    padding-top: var(--Layout--Tiny--Size);
+    margin-bottom: var(--Layout--Tiny--Size);
+}
+
+.proj-detail-table{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+.proj-detail-table span{
+    padding-top: var(--Layout--Tiny--Size);
+    margin-bottom: var(--Layout--Tiny--Size);
+    border-top: 1px solid white;
+}
+
+.proj-detail-table span:nth-child(odd){
+    text-align: center;
+    padding-left: var(--Layout--Small--Size);
     padding-right: var(--Layout--Small--Size);
 }
 
@@ -304,15 +358,11 @@ button:active, ul a:active, .gallery-arrows:hover{
     .proj-overview{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: var(--Layout--Large--Size);
     }
 
-    .proj-overview h2{
-        text-align: center;
-    }
-
-    .proj-overview section{
-        box-sizing: border-box;
-        border: 1px solid white;
+    .proj-features{
+        margin-top: 0;
     }
 
     .yt-video{
@@ -321,6 +371,11 @@ button:active, ul a:active, .gallery-arrows:hover{
 
     #modal-content {
         width: 80%;
+    }
+
+    .gallery-dot{
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -363,5 +418,10 @@ button:active, ul a:active, .gallery-arrows:hover{
         padding-left: 10%;
         width: 80%;
         height: 500px;
+    }
+
+    .gallery-dot{
+        width: 32px;
+        height: 32px;
     }
 }
