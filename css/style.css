@@ -97,7 +97,7 @@ main h1{
 }
 
 .proj-list h3{
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .proj-list-item{
@@ -150,6 +150,7 @@ main h1{
 
 .yt-video{
     width: 100%;
+    border: 0;
 }
 
 .gallery{
@@ -242,13 +243,13 @@ main h1{
     grid-template-columns: max-content 1fr;
 }
 
-.proj-detail-table span{
+.proj-detail-table div{
     padding-top: var(--Layout--Tiny--Size);
     margin-bottom: var(--Layout--Tiny--Size);
     border-top: 1px solid white;
 }
 
-.proj-detail-table span:nth-child(odd){
+.proj-detail-table div:nth-child(odd){
     text-align: center;
     padding-left: var(--Layout--Small--Size);
     padding-right: var(--Layout--Small--Size);
@@ -415,9 +416,11 @@ button:active, ul a:active, .gallery-arrows:hover{
     }
 
     .yt-video{
-        padding-left: 10%;
         width: 80%;
         height: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .gallery-dot{
