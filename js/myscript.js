@@ -24,6 +24,7 @@ let slides = document.getElementsByClassName("gallery-img");
 let dots = document.getElementsByClassName("gallery-dot");
 
 let i;
+
 for(i = 0; i < dots.length; i++){
     const currentIndex = i;
     dots[i].onclick = function(){
@@ -31,7 +32,9 @@ for(i = 0; i < dots.length; i++){
     };
 }
 
-showSlides(slideIndex);
+if (slides.length > 0){
+    showSlides(slideIndex);
+}
 
 function plusSlides(n){
     showSlides(slideIndex + n);
