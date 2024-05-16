@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eden8080</title>
+    <title>Image Loader</title>
 
     <link rel="stylesheet" href="../css/variable.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -34,29 +34,25 @@
         <img id="modal-content" src="../image/s39i3p04512.png" alt="MODAL IMAGE">
     </div>
     <main>
-        <h1>Eden8080</h1>
-        <iframe class="yt-video" width="560" height="315" src="https://www.youtube.com/embed/3NVSdbwYnGg?si=eGMuzFHbl9Y8BQUo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h1>Image Loader</h1>
+        <iframe class="yt-video" width="560" height="315" src="https://www.youtube.com/embed/oP2IqLwplXU?si=ow5hiCn5yxXBAKtI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <div class="proj-overview">
             <section class="proj-detail">
                 <h2>Overview</h2>
                 <div class="proj-detail-table">
-                    <div>Genre</div>
-                    <div>RogueLike Top-Down 3D Shooter</div>
-                    <div>Engine</div>
-                    <div>Unity</div>
+                    <div>Category</div>
+                    <div>Image</div>
                     <div>Type</div>
-                    <div>Graduating 2 People Team Project</div>
+                    <div>Utility</div>
+                    <div>Project Type</div>
+                    <div>Solo Project</div>
                     <div>Duratoin</div>
-                    <div>Sep 2022-May 2023 (9 Months)</div>
+                    <div>May 2021-July 2021 (3 Months)</div>
                     <div>My Role</div>
                     <div>
                         <ul class="role-list">
                             <li>Programmer</li>
-                            <li>Game Designer</li>
-                            <li>UI Designer</li>
-                            <li>Grahpics Programmer</li>
-                            <li>Project Manager</li>
                         </ul>
                     </div>
                 </div>
@@ -65,14 +61,17 @@
             <section class="proj-features">
                 <h2>Features</h2>
                 <ul class="features-list">
-                    <li>Wave Function Collapse Level Generation</li>
-                    <li>8 Randomly Generated Guns</li>
-                    <li>86 Weapon Modifications</li>
-                    <li>31 Unique Enemies</li>
-                    <li>7 Unique Bosses</li>
-                    <li>6 Unique Levels</li>
-                    <li>Finite State Machine AI</li>
-                    <li>Toon Shading</li>
+                    <li>No Dependency</li>
+                    <li>Header Only</li>
+                    <li>PNG Loading</li>
+                    <li>PNG Filter</li>
+                    <li>PNG Interlacing</li>
+                    <li>Any PNG Color Types</li>
+                    <li>PNG Transparency</li>
+                    <li>Jpeg Loading</li>
+                    <li>Jpeg Downsampling</li>
+                    <li>BMP Loading</li>
+                    <li>BMP Compression</li>
                 </ul>
             </section>    
         </div>
@@ -80,45 +79,37 @@
         <section class="proj-desc">
             <h2>About this Project</h2>
             <p>
-                In this game, the player plays as a robot whose objective is to seek vengeance and eliminate anyone who stands in its way. You can carry up to four guns, which can be upgraded by adding various modifications to them. With 86 weapon modifications available, players can customize their guns to fit their playstyle. Additionally, the guns are randomly generated with different weapon parts, providing a unique experience for each gun found.
+                The reason why I made this Image Loader is to gain a better understanding of how image files work, specifically regarding the decoding of PNG, JPEG, and BMP formats. To achieve this, I am building this project from scratch without relying on any external dependencies. For instance, I had to implement the zlib decoding for PNG's data, on my own.
             </p>
 
             <p>
-                With Wave Function Collapse Level Generation and over 40 unique enemies, including bosses, this game offers endless replayability through randomly generated levels and challenging foes.
+                By including the header in C++, this image loader can load PNG, JPEG, and BMP images by inputting the file path.
+            </p>
+
+            <p>
+                To demonstrate, I've created a demo program. After execution, open any image by clicking file->open.
             </p>
         </section>
 
-        <a class="proj-download" href="https://drive.google.com/uc?export=download&id=1GnK3m0iYX-nm5NNbUQW3gBUttPTfPlLV" target="_blank">
+        <a class="proj-download" href="https://drive.google.com/uc?export=download&id=1yAmylpH4lSL4coaCRKYRenRt09SjOhmJ" target="_blank">
             <i class="fa-solid fa-circle-down"></i> Download
         </a>
 
         <section class="gallery">
             <h2>Gallery</h2>
             <div>
-                <img src="../image/Eden8080/Eden8080_01.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_02.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_03.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_04.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_05.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_06.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_07.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_08.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_09.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_10.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_11.png" alt="" class="gallery-img">
-                <img src="../image/Eden8080/Eden8080_12.png" alt="" class="gallery-img">
+                <img src="../image/ImageLoader/IM_01.png" alt="" class="gallery-img">
+                <img src="../image/ImageLoader/IM_02.png" alt="" class="gallery-img">
+                <img src="../image/ImageLoader/IM_03.png" alt="" class="gallery-img">
+                <img src="../image/ImageLoader/IM_04.png" alt="" class="gallery-img">
+                <img src="../image/ImageLoader/IM_05.png" alt="" class="gallery-img">
+                <img src="../image/ImageLoader/IM_06.png" alt="" class="gallery-img">
             </div>
 
             <a class="gallery-arrows" id="g-arrow-prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="gallery-arrows" id="g-arrow-next" onclick="plusSlides(1)">&#10095;</a>
 
             <div class="gallery-dots">
-                <span class="gallery-dot"></span>
-                <span class="gallery-dot"></span>
-                <span class="gallery-dot"></span>
-                <span class="gallery-dot"></span>
-                <span class="gallery-dot"></span>
-                <span class="gallery-dot"></span>
                 <span class="gallery-dot"></span>
                 <span class="gallery-dot"></span>
                 <span class="gallery-dot"></span>
