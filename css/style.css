@@ -311,7 +311,7 @@ button:active, ul a:active, .gallery-arrows:hover{
     padding: 0;
 }
 
-.about-lists{
+.about-lists, .proj-desc{
     margin-top: var(--Layout--Large--Size);
     margin-bottom: var(--Layout--Large--Size);
 }
