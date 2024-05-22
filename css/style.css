@@ -326,6 +326,30 @@ button:active, ul a:active, .gallery-arrows:hover{
     text-align: center;
 }
 
+.about-main ul{
+    padding: 0;
+    padding-left: var(--Layout--Small--Size);
+    list-style: square;
+}
+
+.skills ul{
+    list-style: none;
+    padding: 0;
+}
+
+.skills li{
+    display: inline-block;
+    margin-right: var(--Layout--Tiny--Size);
+    margin-bottom: var(--Layout--Tiny--Size);
+
+    padding-left: var(--Layout--Tiny--Size);
+    padding-right: var(--Layout--Tiny--Size);
+    
+    border-radius: 16px;
+    background-color: var(--Color--Font-Color);
+    color: var(--Color--Background);
+}
+
 @media screen and (min-width: 550px) { 
     header h1{
         font-size: var(--Font--High--Medium);
@@ -413,12 +437,6 @@ button:active, ul a:active, .gallery-arrows:hover{
     .skills{
         grid-row: 1/4;
         grid-column: 2/3;
-    }
-
-    .about-main ul{
-        padding: 0;
-        padding-left: var(--Layout--Small--Size);
-        list-style: square;
     }
 }
 
